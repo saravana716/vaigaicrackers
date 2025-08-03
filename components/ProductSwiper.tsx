@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion} from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Sparkles, Eye } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
@@ -170,7 +170,7 @@ export function ProductSwiper() {
               animate={{ x: `-${currentIndex * (100 / 3)}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              {products.map((product, index) => (
+              {products.map((product) => (
                 <motion.div
                   key={product.id}
                   className="w-1/3 flex-shrink-0 px-3"

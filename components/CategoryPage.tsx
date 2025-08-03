@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Search, Filter, Grid, List, Star, Sparkles, Flame, Rocket, Zap, Crown } from 'lucide-react';
+import { ArrowLeft, Search, Grid, List, Star, Sparkles, Flame,} from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Card, CardContent } from './ui/card';

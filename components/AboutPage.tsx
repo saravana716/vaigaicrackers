@@ -15,19 +15,16 @@ import {
   Zap,
   Trophy,
   Shield,
-  Globe,
-  Clock,
+ 
   ArrowRight,
   Flame
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { Progress } from './ui/progress';
-import logoImage from '../components/logo.webp';
+import logoImage from '../assets/logo.webp';
 
 export function AboutPage() {
-  const [activeTimeline, setActiveTimeline] = useState(0);
   const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, delay: number}>>([]);
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '-50%']);

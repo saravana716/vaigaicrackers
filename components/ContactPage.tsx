@@ -27,7 +27,7 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Badge } from './ui/badge';
-import logoImage from '../components/logo.webp'; // Adjust the path as necessary
+import logoImage from '../assets/logo.webp'; // Adjust the path as necessary
 
 interface FormData {
   name: string;
@@ -599,12 +599,12 @@ export function ContactPage() {
                 <Card className="bg-gradient-to-r from-red-600 to-orange-600 text-white shadow-2xl border-none overflow-hidden">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
-                      <motion.div
-                        animate={{ pulse: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <AlertCircle className="h-10 w-10 text-white" />
-                      </motion.div>
+                    <motion.div
+  animate={{ scale: [1, 1.2, 1] }}
+  transition={{ duration: 2, repeat: Infinity }}
+>
+  <AlertCircle className="h-10 w-10 text-white" />
+</motion.div>
                       <div>
                         <h3 className="text-xl font-bold mb-1">
                           Emergency Support
