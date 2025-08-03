@@ -27,7 +27,8 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Badge } from './ui/badge';
-import logoImage from '../assets/logo.webp'; // Adjust the path as necessary
+import logoImage from '../assets/download.jpeg';
+
 
 interface FormData {
   name: string;

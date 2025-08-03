@@ -22,7 +22,8 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import logoImage from '../assets/logo.webp';
+import logoImage from '../assets/download.jpeg';
+
 
 export function AboutPage() {
   const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, delay: number}>>([]);

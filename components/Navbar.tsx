@@ -26,7 +26,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Badge } from './ui/badge';
 import { Separator } from './ui/separator';
-import logoImage from '../assets/logo.webp';
+import logoImage from '../assets/download.jpeg';
 
 interface NavbarProps {
   onNavigate?: (page: string) => void;
