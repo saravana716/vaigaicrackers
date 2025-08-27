@@ -17,6 +17,7 @@ import './index.css'
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [product, setproduct] = useState<string>("")
 
   // Simple navigation handler
   const handleNavigation = (page: string) => {
@@ -28,7 +29,10 @@ export default function App() {
     setSelectedCategory(categoryId);
     setCurrentPage('category');
   };
-
+  const handleproductClick = (productId: string) => {
+    setproduct(productId)
+    setCurrentPage('product-page');
+  };
   // Back to home handler
   const handleBackToHome = () => {
     setCurrentPage('home');
@@ -58,7 +62,7 @@ export default function App() {
       <Navbar onNavigate={handleNavigation} currentPage={currentPage} />
       <main>
         {currentPage === 'category' ? (
-          <CategoryPage category={selectedCategory} onBack={handleBackToHome} />
+          <CategoryPage category={selectedCategory} onBack={handleBackToHome} handleproductClick={handleproductClick}/>
         ) : currentPage === 'gallery' ? (
           <GalleryPage onBack={handleBackToHome} />
         ) : currentPage === 'product-page' ? (
@@ -69,9 +73,10 @@ export default function App() {
           <AboutPage />
         ) : (
           <>
-            <Hero />
             <OffersBanner />
-            <ProductCategories onCategoryClick={handleCategoryClick} />
+
+            <Hero />
+            <ProductCategories onCategoryClick={handleCategoryClick}  />
             <ProductSwiper />
             <FeaturedProducts />
             <WhyChooseUs />

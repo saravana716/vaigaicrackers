@@ -118,9 +118,10 @@ const categoryData: Record<string, CategoryData> = {
 interface CategoryPageProps {
   category: string;
   onBack: () => void;
+  handleproductClick:(productId: string) => void;
 }
 
-export function CategoryPage({ category, onBack }: CategoryPageProps) {
+export function CategoryPage({ category, onBack,handleproductClick }: CategoryPageProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedSubCategory, setSelectedSubCategory] = useState<string>('all');
@@ -282,6 +283,7 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
                     viewMode={viewMode}
                     index={index}
                     color={data.color}
+                    handleproductClick={handleproductClick}
                   />
                 ))}
               </div>
@@ -325,6 +327,7 @@ export function CategoryPage({ category, onBack }: CategoryPageProps) {
                         viewMode={viewMode}
                         index={index}
                         color={data.color}
+                        handleproductClick={handleproductClick}
                       />
                     ))}
                   </div>
@@ -343,9 +346,12 @@ interface ProductCardProps {
   viewMode: 'grid' | 'list';
   index: number;
   color: string;
+  handleproductClick:(productId: string) => void;
 }
 
-function ProductCard({ product, viewMode, index, color }: ProductCardProps) {
+function ProductCard({ product, viewMode, index, color, handleproductClick}: ProductCardProps) {
+  console.log("Product data:", product);
+
   if (viewMode === 'list') {
     return (
       <motion.div
@@ -392,7 +398,10 @@ function ProductCard({ product, viewMode, index, color }: ProductCardProps) {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-blue-600">{product.price}</span>
-                  <Button className={`bg-gradient-to-r ${color} hover:opacity-90 text-white`}>
+                  <Button 
+                    className={`bg-gradient-to-r ${color} hover:opacity-90 text-white`}
+                    onClick={() => handleproductClick(product.id)}
+                  >
                     View Details
                   </Button>
                 </div>
@@ -458,6 +467,7 @@ function ProductCard({ product, viewMode, index, color }: ProductCardProps) {
             <Button 
               size="sm" 
               className={`bg-gradient-to-r ${color} hover:opacity-90 text-white`}
+              onClick={() => handleproductClick(product.id)}
             >
               View Details
             </Button>

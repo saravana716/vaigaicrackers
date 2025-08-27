@@ -4,7 +4,7 @@ import { Sparkles, Zap, Star } from 'lucide-react';
 import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
-export function Hero() {
+export function  Hero() {
   const [sparkles, setSparkles] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([]);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-logo-red via-logo-orange to-logo-yellow bg-clip-text text-transparent"
+              className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-logo-red via-logo-orange to-logo-yellow bg-clip-text text-red"
             >
               Light Up Your
               <br />

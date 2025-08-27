@@ -328,7 +328,7 @@ export function ContactPage() {
                             className="space-y-3"
                             whileFocus={{ scale: 1.02 }}
                           >
-                            <Label className="text-white font-medium flex items-center">
+                            <Label className="text-black font-medium flex items-center">
                               <User className="w-4 h-4 mr-2 text-blue-400" />
                               Full Name *
                             </Label>
@@ -340,7 +340,7 @@ export function ContactPage() {
                                 onBlur={() => setFocusedField(null)}
                                 placeholder="Enter your full name"
                                 required
-                                className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 focus:border-blue-400 focus:ring-blue-400/50 backdrop-blur-sm transition-all"
+                                className="bg-white/10 border-gray/50 text-black placeholder:text-gray-400 focus:border-blue-400 focus:ring-blue-400/50 backdrop-blur-sm transition-all"
                               />
                               {focusedField === 'name' && (
                                 <motion.div
@@ -358,7 +358,7 @@ export function ContactPage() {
                             className="space-y-3"
                             whileFocus={{ scale: 1.02 }}
                           >
-                            <Label className="text-white font-medium flex items-center">
+                            <Label className="text-black font-medium flex items-center">
                               <Mail className="w-4 h-4 mr-2 text-red-400" />
                               Email Address *
                             </Label>
@@ -371,7 +371,7 @@ export function ContactPage() {
                                 onBlur={() => setFocusedField(null)}
                                 placeholder="your.email@example.com"
                                 required
-                                className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 focus:border-red-400 focus:ring-red-400/50 backdrop-blur-sm transition-all"
+                                className="bg-white/10 border-gray/50 text-black placeholder:text-gray-400 focus:border-red-400 focus:ring-red-400/50 backdrop-blur-sm transition-all"
                               />
                               {focusedField === 'email' && (
                                 <motion.div
@@ -392,7 +392,7 @@ export function ContactPage() {
                             className="space-y-3"
                             whileFocus={{ scale: 1.02 }}
                           >
-                            <Label className="text-white font-medium flex items-center">
+                            <Label className="text-black font-medium flex items-center">
                               <Phone className="w-4 h-4 mr-2 text-green-400" />
                               Phone Number *
                             </Label>
@@ -402,7 +402,7 @@ export function ContactPage() {
                               onChange={(e) => handleInputChange('phone', e.target.value)}
                               placeholder="+91-9876543210"
                               required
-                              className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 focus:border-green-400 focus:ring-green-400/50 backdrop-blur-sm transition-all"
+                              className="bg-white/10 border-gray/50 text-black placeholder:text-gray-400 focus:border-green-400 focus:ring-green-400/50 backdrop-blur-sm transition-all"
                             />
                           </motion.div>
 
@@ -410,7 +410,7 @@ export function ContactPage() {
                             className="space-y-3"
                             whileFocus={{ scale: 1.02 }}
                           >
-                            <Label className="text-white font-medium flex items-center">
+                            <Label className="text-black font-medium flex items-center">
                               <Building className="w-4 h-4 mr-2 text-purple-400" />
                               Company/Organization
                             </Label>
@@ -418,7 +418,7 @@ export function ContactPage() {
                               value={formData.company}
                               onChange={(e) => handleInputChange('company', e.target.value)}
                               placeholder="Your company name (optional)"
-                              className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 focus:border-purple-400 focus:ring-purple-400/50 backdrop-blur-sm transition-all"
+                              className="bg-white/10 border-gray/50 text-black placeholder:text-gray-400 focus:border-purple-400 focus:ring-purple-400/50 backdrop-blur-sm transition-all"
                             />
                           </motion.div>
                         </div>
@@ -426,7 +426,7 @@ export function ContactPage() {
                         {/* Inquiry Type & Event Date Row */}
                         <div className="grid md:grid-cols-2 gap-6">
                           <div className="space-y-3">
-                            <Label className="text-white font-medium">
+                            <Label className="text-black font-medium">
                               Inquiry Type *
                             </Label>
                             <Select
@@ -434,7 +434,7 @@ export function ContactPage() {
                               onValueChange={(value) => handleInputChange('inquiryType', value)}
                               required
                             >
-                              <SelectTrigger className="bg-white/10 border-white/30 text-white focus:border-orange-400 focus:ring-orange-400/50 backdrop-blur-sm">
+                              <SelectTrigger className="bg-white/10 border-gray/50 text-black focus:border-orange-400 focus:ring-orange-400/50 backdrop-blur-sm">
                                 <SelectValue placeholder="What can we help you with?" />
                               </SelectTrigger>
                               <SelectContent className="bg-gray-800 border-gray-600">
@@ -452,7 +452,7 @@ export function ContactPage() {
                           </div>
 
                           <div className="space-y-3">
-                            <Label className="text-white font-medium flex items-center">
+                            <Label className="text-black font-medium flex items-center">
                               <Calendar className="w-4 h-4 mr-2 text-yellow-400" />
                               Event Date (if applicable)
                             </Label>
@@ -460,14 +460,14 @@ export function ContactPage() {
                               type="date"
                               value={formData.eventDate}
                               onChange={(e) => handleInputChange('eventDate', e.target.value)}
-                              className="bg-white/10 border-white/30 text-white focus:border-yellow-400 focus:ring-yellow-400/50 backdrop-blur-sm transition-all"
+                              className="bg-white/10 border-gray/50 text-black focus:border-yellow-400 focus:ring-yellow-400/50 backdrop-blur-sm transition-all"
                             />
                           </div>
                         </div>
 
                         {/* Subject Row */}
                         <div className="space-y-3">
-                          <Label className="text-white font-medium">
+                          <Label className="text-black font-medium">
                             Subject *
                           </Label>
                           <Input
@@ -475,7 +475,7 @@ export function ContactPage() {
                             onChange={(e) => handleInputChange('subject', e.target.value)}
                             placeholder="Brief subject of your inquiry"
                             required
-                            className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 focus:border-cyan-400 focus:ring-cyan-400/50 backdrop-blur-sm transition-all"
+                            className="bg-white/10 border-gray/50 text-black placeholder:text-gray-400 focus:border-cyan-400 focus:ring-cyan-400/50 backdrop-blur-sm transition-all"
                           />
                         </div>
 
@@ -490,7 +490,7 @@ export function ContactPage() {
                             placeholder="Tell us about your celebration plans, requirements, budget, guest count, or any specific questions you have. The more details you provide, the better we can help you!"
                             rows={6}
                             required
-                            className="bg-white/10 border-white/30 text-white placeholder:text-gray-400 focus:border-pink-400 focus:ring-pink-400/50 backdrop-blur-sm transition-all resize-none"
+                            className="bg-white/10 border-gray/50 text-black placeholder:text-gray-400 focus:border-pink-400 focus:ring-pink-400/50 backdrop-blur-sm transition-all resize-none"
                           />
                         </div>
 
@@ -568,7 +568,7 @@ export function ContactPage() {
                               <Icon className="h-6 w-6 text-white" />
                             </motion.div>
                             <div className="flex-1">
-                              <h3 className="text-xl font-bold text-white mb-1">
+                              <h3 className="text-xl font-bold text-gray-700 mb-1">
                                 {info.title}
                               </h3>
                               <p className="text-gray-400 text-sm mb-3">

@@ -84,7 +84,7 @@ const FloatingParticle = ({ delay = 0, size = 4, color = "bg-yellow-400" }) => (
   />
 );
 
-export function ProductPage() {
+export function ProductPage({}) {
   const [selectedImage, setSelectedImage] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [isVideoMuted, setIsVideoMuted] = useState(true);

@@ -93,7 +93,7 @@ export function SafetySection() {
                 <Card className="bg-gray-800/50 border-gray-700 h-full hover:border-gray-600 transition-all">
                   <CardContent className="p-6 text-center">
                     <IconComponent className={`h-12 w-12 ${tip.color} mx-auto mb-4`} />
-                    <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
+                    <h3 className="text-xl font-bold text-black mb-3">{tip.title}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
                   </CardContent>
                 </Card>
@@ -112,7 +112,7 @@ export function SafetySection() {
           >
             <Card className="bg-gray-800/50 border-gray-700">
               <CardHeader>
-                <CardTitle className="text-2xl text-white flex items-center">
+                <CardTitle className="text-2xl text-black flex items-center">
                   <CheckCircle className="h-6 w-6 text-green-400 mr-3" />
                   Safety Guidelines
                 </CardTitle>
@@ -151,7 +151,7 @@ export function SafetySection() {
                   Emergency Preparedness
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-300 space-y-4">
+              <CardContent className="text-black space-y-4">
                 <p>
                   Always have emergency measures ready before using fireworks:
                 </p>
@@ -171,7 +171,7 @@ export function SafetySection() {
                   Legal Compliance
                 </CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-300 space-y-4">
+              <CardContent className="text-black space-y-4">
                 <p className="text-sm">
                   Fireworks laws vary by location. It's your responsibility to:
                 </p>
