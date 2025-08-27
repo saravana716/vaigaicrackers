@@ -184,7 +184,7 @@ export function ProductPage({}) {
                       <div className="absolute bottom-4 left-4 flex space-x-3">
                         <motion.button
                           whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
+                          whileTap={{ scale: 0.8 }}
                           onClick={() => setIsVideoPlaying(!isVideoPlaying)}
                           className="bg-white/20 backdrop-blur-md rounded-full p-3 text-white hover:bg-white/30 transition-colors"
                         >
